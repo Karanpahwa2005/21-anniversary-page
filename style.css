@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    background: url('IMG-20250225-WA0027.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(255, 200, 225, 0.8); /* Stronger pink tint */
+    background-blend-mode: overlay;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+    color: #d63384;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.message {
+    font-size: 22px;
+    color: #b80f52;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    max-width: 70%;
+    margin: 20px auto;
+    line-height: 1.8;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Enable scrolling */
+.scroll-container {
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating Flower Animation */
+.flower {
+    position: absolute;
+    bottom: -100px;
+    background: radial-gradient(circle, #ff99cc, #ff3366);
+    border-radius: 50%;
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(255, 51, 102, 0.8);
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}

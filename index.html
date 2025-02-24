@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Animation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+        .message {
+            font-size: 22px;
+            color: #b80f52;
+            font-weight: 400;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            max-width: 70%;
+            margin: 20px auto;
+            line-height: 1.8;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy 21st Anniversary, Mom & Dad! ❤️🧿💗</h1>
+        <p class="message">Happy 21st Anniversary, Mom & Dad! ❤️<br><br>
+
+        Dear Mom & Dad,  <br><br>
+
+        Today marks 21 years of your beautiful journey together—a journey filled with love, laughter, strength, and unwavering support. Watching both of you over the years has been the greatest blessing, teaching me what true love, commitment, and partnership truly mean.  <br><br>
+
+        Your love is my greatest inspiration. The way you stand by each other through every joy and every challenge, the way you find happiness in the smallest of moments, and the way you create a home full of warmth and care—it’s nothing short of magical.  <br><br>
+
+        I am so grateful to have parents like you. You have built a love so strong that it has not only shaped your lives but has also made me who I am today. I pray that your bond only grows stronger with each passing day, that every sunrise brings you new reasons to smile, and that every sunset wraps you in the comfort of love.  <br><br>
+
+        On this special day, I may not be there with you physically, but my heart is right there, celebrating this beautiful milestone with you. May this year and the years ahead be filled with endless love, togetherness, and all the happiness you both deserve.  <br><br>
+
+        Happy 21st Anniversary, my dear Mom & Dad! ❤️ <br>
+        I love you both more than words can ever express.  <br><br>
+
+        With all my love,💖</p>
+    </div>
+
+    <!-- Flower elements generated using JavaScript or HTML -->
+    <div class="flower" style="width: 40px; height: 40px;"></div>
+    <div class="flower" style="width: 50px; height: 50px;"></div>
+    <div class="flower" style="width: 60px; height: 60px;"></div>
+    <div class="flower" style="width: 30px; height: 30px;"></div>
+    <div class="flower" style="width: 45px; height: 45px;"></div>
+
+    <script>
+        // Optionally, add more flowers dynamically
+        document.addEventListener('DOMContentLoaded', () => {
+            const numFlowers = 20; // Number of flowers
+            for (let i = 0; i < numFlowers; i++) {
+                const flower = document.createElement('div');
+                flower.classList.add('flower');
+                flower.style.width = `${Math.random() * 50 + 20}px`;
+                flower.style.height = flower.style.width;
+                flower.style.left = `${Math.random() * 100}vw`;
+                flower.style.animationDuration = `${Math.random() * 4 + 4}s`;
+                document.body.appendChild(flower);
+            }
+        });
+    </script>
+</body>
+</html>
